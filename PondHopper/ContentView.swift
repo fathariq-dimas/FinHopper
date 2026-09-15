@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  PondHopper
+//  FinHopper
 //
 //  Created by Fathariq Dimas on 08/09/26.
 //
@@ -8,14 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var sessionModel = GameSessionModel()
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        RootGameView(model: sessionModel)
     }
 }
 
